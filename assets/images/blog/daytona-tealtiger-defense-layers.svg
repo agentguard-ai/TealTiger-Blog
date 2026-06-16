@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" font-family="'Inter', 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="tealBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0d9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="daytonaBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#818cf8;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadowSm" x="-3%" y="-3%" width="106%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="380" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="700" fill="#1e293b">Dual-Layer Defense: What Each Layer Prevents</text>
+
+  <!-- Headers -->
+  <rect x="50" y="55" width="320" height="36" rx="8" fill="url(#tealBg)"/>
+  <text x="210" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">TealTiger (Logic Governance)</text>
+
+  <rect x="430" y="55" width="320" height="36" rx="8" fill="url(#daytonaBg)"/>
+  <text x="590" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Daytona (Infrastructure Isolation)</text>
+
+  <!-- TealTiger items -->
+  <g filter="url(#shadowSm)">
+    <rect x="50" y="105" width="320" height="50" rx="8" fill="#fff" stroke="#0d9488" stroke-width="1.5"/>
+    <circle cx="80" cy="130" r="14" fill="#f0fdfa"/>
+    <text x="80" y="134" text-anchor="middle" font-size="14">🔑</text>
+    <text x="105" y="124" font-size="11" font-weight="600" fill="#1e293b">Secret Leakage Prevention</text>
+    <text x="105" y="140" font-size="9" fill="#64748b">500+ credential patterns blocked before sandbox</text>
+  </g>
+
+  <g filter="url(#shadowSm)">
+    <rect x="50" y="165" width="320" height="50" rx="8" fill="#fff" stroke="#0d9488" stroke-width="1.5"/>
+    <circle cx="80" cy="190" r="14" fill="#f0fdfa"/>
+    <text x="80" y="194" text-anchor="middle" font-size="14">🛡️</text>
+    <text x="105" y="184" font-size="11" font-weight="600" fill="#1e293b">PII Protection</text>
+    <text x="105" y="200" font-size="9" fill="#64748b">SSN, credit cards, emails never enter environment</text>
+  </g>
+
+  <g filter="url(#shadowSm)">
+    <rect x="50" y="225" width="320" height="50" rx="8" fill="#fff" stroke="#0d9488" stroke-width="1.5"/>
+    <circle cx="80" cy="250" r="14" fill="#f0fdfa"/>
+    <text x="80" y="254" text-anchor="middle" font-size="14">💰</text>
+    <text x="105" y="244" font-size="11" font-weight="600" fill="#1e293b">LLM Cost Control</text>
+    <text x="105" y="260" font-size="9" fill="#64748b">Per-request, per-session, per-day token budgets</text>
+  </g>
+
+  <g filter="url(#shadowSm)">
+    <rect x="50" y="285" width="320" height="50" rx="8" fill="#fff" stroke="#0d9488" stroke-width="1.5"/>
+    <circle cx="80" cy="310" r="14" fill="#f0fdfa"/>
+    <text x="80" y="314" text-anchor="middle" font-size="14">📋</text>
+    <text x="105" y="304" font-size="11" font-weight="600" fill="#1e293b">Audit Evidence (TEEC)</text>
+    <text x="105" y="320" font-size="9" fill="#64748b">Structured receipts: SARIF, JUnit XML, JSON</text>
+  </g>
+
+  <!-- Daytona items -->
+  <g filter="url(#shadowSm)">
+    <rect x="430" y="105" width="320" height="50" rx="8" fill="#fff" stroke="#6366f1" stroke-width="1.5"/>
+    <circle cx="460" cy="130" r="14" fill="#eef2ff"/>
+    <text x="460" y="134" text-anchor="middle" font-size="14">🖥️</text>
+    <text x="485" y="124" font-size="11" font-weight="600" fill="#1e293b">Kernel Isolation</text>
+    <text x="485" y="140" font-size="9" fill="#64748b">Dedicated kernel per sandbox instance</text>
+  </g>
+
+  <g filter="url(#shadowSm)">
+    <rect x="430" y="165" width="320" height="50" rx="8" fill="#fff" stroke="#6366f1" stroke-width="1.5"/>
+    <circle cx="460" cy="190" r="14" fill="#eef2ff"/>
+    <text x="460" y="194" text-anchor="middle" font-size="14">📁</text>
+    <text x="485" y="184" font-size="11" font-weight="600" fill="#1e293b">Filesystem Isolation</text>
+    <text x="485" y="200" font-size="9" fill="#64748b">Ephemeral filesystem — nothing persists</text>
+  </g>
+
+  <g filter="url(#shadowSm)">
+    <rect x="430" y="225" width="320" height="50" rx="8" fill="#fff" stroke="#6366f1" stroke-width="1.5"/>
+    <circle cx="460" cy="250" r="14" fill="#eef2ff"/>
+    <text x="460" y="254" text-anchor="middle" font-size="14">🌐</text>
+    <text x="485" y="244" font-size="11" font-weight="600" fill="#1e293b">Network Isolation</text>
+    <text x="485" y="260" font-size="9" fill="#64748b">Controlled egress — no unplanned exfiltration</text>
+  </g>
+
+  <g filter="url(#shadowSm)">
+    <rect x="430" y="285" width="320" height="50" rx="8" fill="#fff" stroke="#6366f1" stroke-width="1.5"/>
+    <circle cx="460" cy="310" r="14" fill="#eef2ff"/>
+    <text x="460" y="314" text-anchor="middle" font-size="14">⏱️</text>
+    <text x="485" y="304" font-size="11" font-weight="600" fill="#1e293b">Resource Limits</text>
+    <text x="485" y="320" font-size="9" fill="#64748b">CPU, memory, and time capped per execution</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="150" y="348" width="500" height="24" rx="6" fill="#f1f5f9"/>
+  <text x="400" y="364" text-anchor="middle" font-size="10" font-weight="600" fill="#475569">Together: Complete defense-in-depth — nothing leaks in, nothing escapes out</text>
+</svg>

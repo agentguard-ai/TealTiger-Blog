@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" font-family="'Inter', 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="auditTeal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0d9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="auditIndigo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#818cf8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="auditGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#16a34a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22c55e;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrow2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <filter id="sh2" x="-3%" y="-5%" width="106%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="700" fill="#1e293b">Unified Audit Trail: Governance → Execution → Evidence</text>
+
+  <!-- Step 1: TealTiger Decision -->
+  <g filter="url(#sh2)">
+    <rect x="40" y="60" width="200" height="120" rx="10" fill="#fff" stroke="#0d9488" stroke-width="2"/>
+    <rect x="40" y="60" width="200" height="32" rx="10" fill="url(#auditTeal)"/>
+    <text x="140" y="81" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">① Governance Decision</text>
+    <text x="60" y="110" font-size="9" fill="#374151">decision_id: uuid-4a8b...</text>
+    <text x="60" y="126" font-size="9" fill="#374151">policy_digest: sha256...</text>
+    <text x="60" y="142" font-size="9" fill="#374151">risk_score: 0.12</text>
+    <text x="60" y="158" font-size="9" fill="#374151">action: ALLOW</text>
+    <text x="60" y="174" font-size="9" fill="#374151">latency_ms: 3.2</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M240 120 L290 120" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow2)"/>
+
+  <!-- Step 2: Daytona Execution -->
+  <g filter="url(#sh2)">
+    <rect x="295" y="60" width="200" height="120" rx="10" fill="#fff" stroke="#6366f1" stroke-width="2"/>
+    <rect x="295" y="60" width="200" height="32" rx="10" fill="url(#auditIndigo)"/>
+    <text x="395" y="81" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">② Sandbox Execution</text>
+    <text x="315" y="110" font-size="9" fill="#374151">sandbox_id: dtn-9f2c...</text>
+    <text x="315" y="126" font-size="9" fill="#374151">exit_code: 0</text>
+    <text x="315" y="142" font-size="9" fill="#374151">duration_ms: 1847</text>
+    <text x="315" y="158" font-size="9" fill="#374151">memory_peak: 128MB</text>
+    <text x="315" y="174" font-size="9" fill="#374151">network_egress: 0 bytes</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M495 120 L545 120" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow2)"/>
+
+  <!-- Step 3: TEEC Receipt -->
+  <g filter="url(#sh2)">
+    <rect x="550" y="60" width="210" height="120" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+    <rect x="550" y="60" width="210" height="32" rx="10" fill="url(#auditGreen)"/>
+    <text x="655" y="81" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">③ TEEC Evidence Receipt</text>
+    <text x="570" y="110" font-size="9" fill="#374151">correlation_id: trace-7d...</text>
+    <text x="570" y="126" font-size="9" fill="#374151">governance: ✓ linked</text>
+    <text x="570" y="142" font-size="9" fill="#374151">execution: ✓ linked</text>
+    <text x="570" y="158" font-size="9" fill="#374151">cost_usd: $0.0042</text>
+    <text x="570" y="174" font-size="9" fill="#374151">export: SARIF | JUnit | JSON</text>
+  </g>
+
+  <!-- Bottom explanation -->
+  <rect x="100" y="210" width="600" height="70" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="400" y="235" text-anchor="middle" font-size="11" font-weight="600" fill="#166534">Compliance-Ready Evidence Chain</text>
+  <text x="400" y="255" text-anchor="middle" font-size="10" fill="#15803d">Every sandbox execution links back to the governance decision that approved it.</text>
+  <text x="400" y="272" text-anchor="middle" font-size="10" fill="#15803d">Exportable for SOC 2, HIPAA, EU AI Act audit requirements.</text>
+</svg>
