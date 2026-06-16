@@ -185,14 +185,6 @@ async def create_governed_client():
 - [Design Discussion: Dakera-AI/dakera-deploy#169](https://github.com/Dakera-AI/dakera-deploy/discussions/169)
 - PyPI: `pip install dakera[tealtiger]`
 
-## What's Next
-
-- **Governance event stream** — Dakera SSE → TealTiger SARIF export pipeline
-- **Cross-agent governance visualization** — network graph of delegation
-  chains and decision flows
-- **TypeScript SDK integration** — TealTiger TS SDK + Dakera JS SDK
-  (PR #157 in progress)
-
 ---
 
 Governance state shouldn't be a single point of failure. With Dakera as the
